@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= metamagic %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <nav class='white'>
+    <div class='nav-wrapper container'>
+      <a href='/'
+         class='brand-logo grey-text text-darken-2'>
+        Crossroads Global Solutions
+      </a>
+      <a href='#'
+         data-activates='mobile'
+        class='button-collapse grey-text text-darken-2'>
+        <i class='material-icons'>menu</i>
+      </a>
+      <ul class='right hide-on-med-and-down'>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/services'>FREIGHT SERVICES</a>
+        </li>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/about'>ABOUT</a>
+        </li>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/contact'>CONTACT</a>
+        </li>
+        <li>
+          <a class='waves-effect waves-light btn yellow yellow-accent-4 grey-text text-darken-4'>
+            Get Free Quote
+          </a>
+        </li>
+      </ul>
+      <ul class='side-nav' id='mobile'>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/services'>FREIGHT SERVICES</a>
+        </li>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/about'>ABOUT</a>
+        </li>
+        <li>
+          <a class='grey-text text-darken-2'
+             href='/contact'>CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <body>
+      <%= yield %>
+      <br /><br /><br /><br /><br /><br />
+    </body>
+  </main>
+  <footer class='page-footer grey darken-2'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col l6 s12'>
+          <h5 class='white-text'>Questions?</h5>
+          <a class='white-text'
+             href='tel:+18554220052'>
+            Call 1-855-422-0052 for support now!
+          </a>
+        </div>
+        <div class='col l3 s12'>
+          <h5 class='white-text'>Freight Services</h5>
+          <ul>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='#!'>
+                Overseas Shipping
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='#!'>
+                Air Mail
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='#!'>
+                Custom Logistics
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='#!'>
+                Truckload Shipping
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='#!'>
+                LTL Freight Shipping
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class='col l3 s12'>
+          <h5 class='white-text'>Resources</h5>
+          <ul>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='/about'>
+                About
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='/contact'>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='footer-copyright'>
+      <div class='container'>
+        © <%= Date.today.year %> Crossroads Global Solutions LLC. All Rights Reserved.
+        <a class='grey-text text-lighten-4 right'
+           href='/terms_of_service'>
+          Terms of Service
+        </a>
+        <a class='grey-text text-lighten-4 right'
+           style='padding-right: 20px;'
+           href='/privacy_policy'>
+          Privacy Policy
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    $('.button-collapse').sideNav();
+  </script>
+</html>

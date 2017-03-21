@@ -1,0 +1,57 @@
+<%
+  meta title: "Contact | Crossroads Global Solutions"
+       description:'Have a question? 1-855-422-0052 | questions@crossroadsglobalsolutions.com'
+%>
+
+<div class='container'>
+  <h1 class='center-align'>Contact</h1>
+  <br />
+  <div class='container'>
+    <div class="card white z-depth-1">
+      <div class="card-content grey-text text-darken-2">
+        <span class="card-title">
+          We are here to help. Let us know if you have any questions or concerns.
+          Use the form below to send an email.
+        </span>
+        <%= form_tag('/submit_info', method: 'post') do %>
+          <input name='name' type='text' placeholder='Name' required=true>
+          <br />
+          <input name='email' type='email' placeholder='Email' required=true>
+          <br />
+          <input name='phone' type='text' placeholder='Phone' required=true>
+          <br />
+          <label>
+            Message
+          </label>
+          <textarea id="message" class='materialize-textarea' data-length='120' required=true>
+          </textarea>
+          <br /><br />
+          <%= submit_tag('SEND EMAIL', class:'btn btn-large grey-text text-darken-4', style: 'width: 100%;') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <h5 class='center-align'>
+    Have a question?
+  </h5>
+  <div class='center-align'>
+    <br />
+    <a class='grey-text text-darken-4'
+       style='font-size: 120%;'
+       href='tel:+18554220052'>
+      <i class='material-icons medium grey-text text-darken-4'>phone</i>
+      <br />
+      1-855-422-0052
+    </a>
+    <br /><br />
+    <a class='grey-text text-darken-4'
+       style='font-size: 120%;'
+       href='mailto:questions@crossroadsglobalsolutions.com'>
+      <i class='material-icons medium grey-text text-darken-4'>email</i>
+      <br />
+      questions@crossroadsglobalsolutions.com
+    </a>
+    <br /><br />
+  </div>
+</div>
