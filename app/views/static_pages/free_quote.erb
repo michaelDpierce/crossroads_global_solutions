@@ -1,0 +1,107 @@
+<%
+  meta title: "Free Quote | Crossroads Global Solutions"
+       description:'Get your free quote today!'
+%>
+
+<div class='container'>
+  <h1 class='center-align'>Free Quote</h1>
+  <br />
+  <div class='container'>
+    <div class='card white z-depth-1'>
+      <div class='card-content grey-text text-darken-2'>
+        <span class='card-title'>
+          Enter your information to access free freight shipping quotes.
+        </span>
+        <br />
+        <%= form_tag('/request_quote', method: 'post') do %>
+          <label for='name'>Name</label>
+          <input name='name' type='text' placeholder='Name'>
+          <br />
+          <label for='email'>Email</label>
+          <input name='email' type='email' placeholder='Email'>
+          <br />
+          <label for='phone'>Phone</label>
+          <input name='phone' type='text' placeholder='Phone'>
+          <br />
+          <div class='input-field'>
+            <select name='quoteType'>
+              <option value='1'>Single Shipment Quote</option>
+              <option value='2'>Looking for Freight Rates</option>
+            </select>
+            <label>Quote Type</label>
+          </div>
+          <label for='fromZip'>Origin Zip Code</label>
+          <input name='fromZip' type='text' placeholder='Origin Zip Code'>
+          <br />
+          <div class='input-field'>
+            <select name='fromLocationType'>
+              <option value='1'>Business</option>
+              <option value='2'>Residence</option>
+              <option value='3'>Other</option>
+            </select>
+            <label>Origin Location Type</label>
+          </div>
+          <label for='toZip'>Destination Zip Code</label>
+          <input name='toZip' type='text' placeholder='Destination Zip Code'>
+          <br />
+          <div class='input-field'>
+            <select name='toLocationType'>>
+              <option value='1'>Business</option>
+              <option value='2'>Residence</option>
+              <option value='3'>Other</option>
+            </select>
+            <label>Destination Location Type</label>
+          </div>
+          <div class='row'>
+            <div class='col s12 m1'>
+              <label for='Pieces'>Pieces</label>
+              <input name='pieces' type='text' placeholder='Pieces'>
+            </div>
+            <div class='col s12 m3'>
+              <label for='pieces'>Dimensions</label>
+              <input name='dimensions' type='text' placeholder='L x W x H'>
+            </div>
+            <div class='col s12 m2'>
+              <label for='weight'>Weight</label>
+              <input name='weight' type='text' placeholder='Weight in lbs'>
+            </div>
+            <div class='col s12 m6'>
+              <label for='description'>Description</label>
+              <input name='description' type='text' placeholder='Description'>
+            </div>
+          </div>
+          <%= submit_tag('GET MY FREE QUOTE', class:'btn btn-large grey-text text-darken-4', style: 'width: 100%;') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <h5 class='center-align'>
+    Have a question?
+  </h5>
+  <div class='center-align'>
+    <br />
+    <a class='grey-text text-darken-4'
+       style='font-size: 120%;'
+       href='tel:+18554220052'>
+      <i class='material-icons medium grey-text text-darken-4'>phone</i>
+      <br />
+      1-855-422-0052
+    </a>
+    <br /><br />
+    <a class='grey-text text-darken-4'
+       style='font-size: 120%;'
+       href='mailto:questions@crossroadsglobalsolutions.com'>
+      <i class='material-icons medium grey-text text-darken-4'>email</i>
+      <br />
+      questions@crossroadsglobalsolutions.com
+    </a>
+    <br /><br />
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>

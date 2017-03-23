@@ -6,100 +6,134 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel='apple-touch-icon' sizes='57x57' href='/apple-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='/apple-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='/apple-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='/apple-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='/apple-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='/apple-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='/apple-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='/apple-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-icon-180x180.png'>
+    <link rel='icon' type='image/png' sizes='192x192'  href='/android-icon-192x192.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='96x96' href='/favicon-96x96.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
+    <link rel='manifest' href='/manifest.json'>
+    <meta name='msapplication-TileColor' content='#ffffff'>
+    <meta name='msapplication-TileImage' content='/ms-icon-144x144.png'>
+    <meta name='theme-color' content='#ffffff'>
   </head>
-  <nav class='white'>
-    <div class='nav-wrapper container'>
-      <a href='/'
-         class='brand-logo grey-text text-darken-2'>
-        Crossroads Global Solutions
-      </a>
-      <a href='#'
-         data-activates='mobile'
-        class='button-collapse grey-text text-darken-2'>
-        <i class='material-icons'>menu</i>
-      </a>
-      <ul class='right hide-on-med-and-down'>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/services'>FREIGHT SERVICES</a>
-        </li>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/about'>ABOUT</a>
-        </li>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/contact'>CONTACT</a>
-        </li>
-        <li>
-          <a class='waves-effect waves-light btn yellow yellow-accent-4 grey-text text-darken-4'>
-            Get Free Quote
-          </a>
-        </li>
-      </ul>
-      <ul class='side-nav' id='mobile'>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/services'>FREIGHT SERVICES</a>
-        </li>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/about'>ABOUT</a>
-        </li>
-        <li>
-          <a class='grey-text text-darken-2'
-             href='/contact'>CONTACT</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class='navbar-fixed'>
+    <nav class='white'>
+      <div class='nav-wrapper container'>
+        <%= link_to root_url, class: 'brand-logo grey-text text-darken-2' do %>
+          <%= image_tag '/cgs_logo.png',
+                        class: 'logo-img',
+                        title: 'Crossroads Global Solutions Logo',
+                        alt:'Crossroads Global Solutions Logo' %>
+        <% end %>
+        <a href='#'
+           data-activates='mobile'
+          class='button-collapse grey-text text-darken-2'>
+          <i class='material-icons'>menu</i>
+        </a>
+        <ul class='right hide-on-med-and-down'>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/services'>SERVICES</a>
+          </li>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/about'>ABOUT</a>
+          </li>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/contact'>CONTACT</a>
+          </li>
+          <li>
+            <a class='waves-effect waves-light btn amber amber-lighten-1 grey-text text-darken-4'
+               href='/free_quote'>
+              Get Free Quote
+            </a>
+          </li>
+        </ul>
+        <ul class='side-nav' id='mobile'>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/services'>SERVICES</a>
+          </li>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/about'>ABOUT</a>
+          </li>
+          <li>
+            <a class='grey-text text-darken-2'
+               href='/contact'>CONTACT</a>
+          </li>
+          <li>
+            <a class='waves-effect waves-light btn amber amber-lighten-1 grey-text text-darken-4'
+               href='/free_quote'>
+              Get Free Quote
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <main>
     <body>
       <%= yield %>
-      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br />
     </body>
   </main>
   <footer class='page-footer grey darken-2'>
     <div class='container'>
       <div class='row'>
-        <div class='col l6 s12'>
+        <div class='col l3 s12'>
           <h5 class='white-text'>Questions?</h5>
           <a class='white-text'
              href='tel:+18554220052'>
-            Call 1-855-422-0052 for support now!
+            Call 1-855-422-0052
           </a>
         </div>
         <div class='col l3 s12'>
-          <h5 class='white-text'>Freight Services</h5>
+          <h5 class='white-text'>Services</h5>
           <ul>
             <li>
               <a class='grey-text text-lighten-3'
-                 href='#!'>
-                Overseas Shipping
+                 href='/services'>
+                Full Truckload
               </a>
             </li>
             <li>
               <a class='grey-text text-lighten-3'
-                 href='#!'>
-                Air Mail
+                 href='/services'>
+                Less-Than-Truckload (LTL)
               </a>
             </li>
             <li>
               <a class='grey-text text-lighten-3'
-                 href='#!'>
-                Custom Logistics
+                 href='/services'>
+                Integrated Distribution
               </a>
             </li>
             <li>
               <a class='grey-text text-lighten-3'
-                 href='#!'>
-                Truckload Shipping
+                 href='/services'>
+                White Glove Services
               </a>
             </li>
             <li>
               <a class='grey-text text-lighten-3'
-                 href='#!'>
-                LTL Freight Shipping
+                 href='/services'>
+                International Freight
+              </a>
+            </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='/services'>
+                Intermodal
               </a>
             </li>
           </ul>
@@ -107,6 +141,12 @@
         <div class='col l3 s12'>
           <h5 class='white-text'>Resources</h5>
           <ul>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='/free_quote'>
+                Free Quote
+              </a>
+            </li>
             <li>
               <a class='grey-text text-lighten-3'
                  href='/about'>
@@ -119,13 +159,32 @@
                 Contact
               </a>
             </li>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='/testimonials'>
+                Testimonials
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class='col l3 s12'>
+          <h5 class='white-text'>Social</h5>
+          <ul>
+            <li>
+              <a class='grey-text text-lighten-3'
+                 href='https://www.facebook.com/crossroadsglobalsolutions/'
+                 target='_blank'>
+                Facebook
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class='footer-copyright'>
       <div class='container'>
-        © <%= Date.today.year %> Crossroads Global Solutions LLC. All Rights Reserved.
+        ©2010-<%= Date.today.year %> Crossroads Global Solutions LLC. All Rights Reserved.
+        <br />
         <a class='grey-text text-lighten-4 right'
            href='/terms_of_service'>
           Terms of Service

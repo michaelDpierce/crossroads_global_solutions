@@ -11,22 +11,25 @@
       <div class="card-content grey-text text-darken-2">
         <span class="card-title">
           We are here to help. Let us know if you have any questions or concerns.
-          Use the form below to send an email.
+          Use the form below to send a message.
         </span>
-        <%= form_tag('/submit_info', method: 'post') do %>
+        <%= form_tag('/send_message', method: 'post') do %>
+          <label for='name'>Name</label>
           <input name='name' type='text' placeholder='Name' required=true>
           <br />
+          <label for='email'>Email</label>
           <input name='email' type='email' placeholder='Email' required=true>
           <br />
+          <label for='phone'>Phone</label>
           <input name='phone' type='text' placeholder='Phone' required=true>
           <br />
           <label>
             Message
           </label>
-          <textarea id="message" class='materialize-textarea' data-length='120' required=true>
+          <textarea id='message' name='message' class='materialize-textarea' required=true>
           </textarea>
           <br /><br />
-          <%= submit_tag('SEND EMAIL', class:'btn btn-large grey-text text-darken-4', style: 'width: 100%;') %>
+          <%= submit_tag('SEND', class:'btn btn-large grey-text text-darken-4', style: 'width: 100%;') %>
         <% end %>
       </div>
     </div>
@@ -55,3 +58,9 @@
     <br /><br />
   </div>
 </div>
+
+
+<script>
+  $('#message').val('');
+  $('#message').trigger('autoresize');
+</script>

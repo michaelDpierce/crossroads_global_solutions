@@ -11,4 +11,17 @@ body {
 main {
   flex: 1 0 auto;
 }
- 
+
+.logo-img {
+  height: 50px; position: relative; top:5px !important;
+}
+
+#header_section {
+  position: relative;
+  bottom: 30px;
+	background-image:url('/truck.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-attachment: fixed;
+}
