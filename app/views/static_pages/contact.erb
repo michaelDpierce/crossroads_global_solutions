@@ -18,18 +18,16 @@
           <input name='authenticity_token'
                  type='hidden'
                  value="<%= form_authenticity_token %>"/>
-          <label for='name'>Name</label>
+          <label for='name'>Name *</label>
           <input name='name' type='text' placeholder='Name' required=true>
           <br />
-          <label for='email'>Email</label>
+          <label for='email'>Email *</label>
           <input name='email' type='email' placeholder='Email' required=true>
           <br />
-          <label for='phone'>Phone</label>
+          <label for='phone'>Phone *</label>
           <input name='phone' type='text' placeholder='Phone' required=true>
           <br />
-          <label>
-            Message
-          </label>
+          <label>Message *</label>
           <textarea id='message' name='message' class='materialize-textarea' required=true>
           </textarea>
           <br /><br />
