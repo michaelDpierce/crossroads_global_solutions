@@ -14,9 +14,10 @@
         </span>
         <br />
         <%= form_tag('/request_quote', method: 'post') do %>
-        <input name='authenticity_token'
-               type='hidden'
-               value="<%= form_authenticity_token %>"/>
+          <input name='authenticity_token'
+                 type='hidden'
+                 value="<%= form_authenticity_token %>"/>
+          <%= token_tag nil %>
           <label for='name'>Name</label>
           <input name='name' type='text' placeholder='Name'>
           <br />

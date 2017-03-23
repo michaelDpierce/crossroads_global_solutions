@@ -94,6 +94,7 @@ Rails.application.configure do
     :port => 587,
     :domain => "email.mg.crg-llc.net",
     :user_name => "postmaster@mg.crg-llc.net",
-    :password => "Wasd1313!"
+    :password => "fe3ad0f344fb9c490ebc18344244829e",
+    enable_starttls_auto: true
   }
 end
