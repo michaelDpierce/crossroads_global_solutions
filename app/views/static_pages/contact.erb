@@ -14,6 +14,9 @@
           Use the form below to send a message.
         </span>
         <%= form_tag('/send_message', method: 'post') do %>
+          <input name='authenticity_token' 
+                 type='hidden'
+                 value="<%= form_authenticity_token %>"/>
           <label for='name'>Name</label>
           <input name='name' type='text' placeholder='Name' required=true>
           <br />
