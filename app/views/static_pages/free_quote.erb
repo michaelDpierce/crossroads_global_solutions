@@ -19,13 +19,13 @@
                  value="<%= form_authenticity_token %>"/>
           <%= token_tag nil %>
           <label for='name'>Name *</label>
-          <input name='name' type='text' placeholder='Name'>
+          <input name='name' type='text' placeholder='Name' required=true>
           <br />
           <label for='email'>Email *</label>
-          <input name='email' type='email' placeholder='Email'>
+          <input name='email' type='email' placeholder='Email' required=true>
           <br />
           <label for='phone'>Phone *</label>
-          <input name='phone' type='text' placeholder='Phone'>
+          <input name='phone' type='text' placeholder='Phone' required=true>
           <br />
           <label>Quote Type *</label>
           <br />
@@ -35,7 +35,7 @@
           </select>
           <br />
           <label for='fromZip'>Origin Zip Code *</label>
-          <input name='fromZip' type='text' placeholder='Origin Zip Code'>
+          <input name='fromZip' type='text' placeholder='Origin Zip Code' required=true>
           <br />
           <label>Origin Location Type *</label>
           <br />
@@ -46,7 +46,7 @@
           </select>
           <br />
           <label for='toZip'>Destination Zip Code *</label>
-          <input name='toZip' type='text' placeholder='Destination Zip Code'>
+          <input name='toZip' type='text' placeholder='Destination Zip Code' required=true>
           <br />
           <label>Destination Location Type *</label>
           <br />
@@ -59,19 +59,19 @@
           <div class='row'>
             <div class='col s12 m6'>
               <label for='Pieces'>Pieces *</label>
-              <input name='pieces' type='text' placeholder='Pieces'>
+              <input name='pieces' type='text' placeholder='Pieces' required=true>
             </div>
             <div class='col s12 m6'>
               <label for='pieces'>Dimensions * (L x W x H)</label>
-              <input name='dimensions' type='text' placeholder='L x W x H'>
+              <input name='dimensions' type='text' placeholder='L x W x H' required=true>
             </div>
             <div class='col s12 m6'>
               <label for='weight'>Weight * (lbs)</label>
-              <input name='weight' type='text' placeholder='Weight in lbs'>
+              <input name='weight' type='text' placeholder='Weight in lbs' required=true>
             </div>
             <div class='col s12 m6'>
               <label for='description'>Description *</label>
-              <input name='description' type='text' placeholder='Description'>
+              <input name='description' type='text' placeholder='Description' required=true>
             </div>
           </div>
           <p class='grey-text'>
