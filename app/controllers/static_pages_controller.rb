@@ -37,11 +37,11 @@ class StaticPagesController < ApplicationController
       name: params['name'],
       email: params['email'],
       phone: params['phone'],
-      quoteType: params['quoteType'],
+      quoteType: quote_type_lookup(params['quoteType']),
       fromZip: params['fromZip'],
-      fromLocationType: params['fromLocationType'],
+      fromLocationType: lookup_location_type(params['fromLocationType']),
       toZip: params['toZip'],
-      toLocationType: params['toLocationType'],
+      toLocationType: lookup_location_type(params['toLocationType']),
       pieces: params['pieces'],
       dimensions: params['dimensions'],
       weight: params['weight'],
@@ -53,5 +53,25 @@ class StaticPagesController < ApplicationController
   end
 
   def testimonials
+  end
+
+  private
+
+  def quote_type_lookup(option)
+    if option == '1'
+      quote_type = 'Single Shipment Quote'
+    elsif option == '2'
+      quote_type = 'Looking for Freight Rates'
+    end
+  end
+
+  def lookup_location_type(option)
+    if option == '1'
+      return 'Business'
+    elsif option == '2'
+      return 'Residence'
+    elsif option == '3'
+      return 'Other'
+    end
   end
 end
