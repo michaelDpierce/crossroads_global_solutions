@@ -57,9 +57,9 @@ Rails.application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "email.mg.crg-llc.net",
-    :user_name => "postmaster@sandbox7b286ffb17d149479b2143dc53bbe126.mailgun.org",
-    :password => "aee297a7c082e6920bb035125a921cd8",
+    :domain => "email.mg.cgs-llc.net",
+    :user_name => "postmaster@mg.cgs-llc.net",
+    :password => "71c7380aa2c9553f2e8603abab08d7dd",
     enable_starttls_auto: true
   }
 end
