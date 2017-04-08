@@ -2,8 +2,6 @@ class StaticPagesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def home
-    expires_in 4.hours, :public => true
-
   end
 
   def privacy_policy
@@ -13,6 +11,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def taxidermy
   end
 
   def send_message

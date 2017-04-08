@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   match '/request_quote', to: 'static_pages#request_quote', via: 'post'
   match '/thank_you', to: 'static_pages#thank_you', via: 'get'
   match '/testimonials', to: 'static_pages#testimonials', via: 'get'
-
+  match '/taxidermy', to: 'static_pages#taxidermy', via: 'get'
 end
