@@ -5,8 +5,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0 user-scalable=no'>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel='apple-touch-icon' sizes='57x57' href='/apple-icon-57x57.png'>
     <link rel='apple-touch-icon' sizes='60x60' href='/apple-icon-60x60.png'>
     <link rel='apple-touch-icon' sizes='72x72' href='/apple-icon-72x72.png'>
@@ -180,21 +178,24 @@
   </footer>
 
   <!-- Scripts -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
   <script>
     $('.button-collapse').sideNav();
   </script>
 
-<script>
-    (function(d, w, c) {
-        w.ChatraID = 'v8x6uaKdKp9iTudnK';
-        var s = d.createElement('script');
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        s.async = true;
-        s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
-        + '//call.chatra.io/chatra.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'Chatra');
-</script>
+  <script>
+      (function(d, w, c) {
+          w.ChatraID = 'v8x6uaKdKp9iTudnK';
+          var s = d.createElement('script');
+          w[c] = w[c] || function() {
+              (w[c].q = w[c].q || []).push(arguments);
+          };
+          s.async = true;
+          s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+          + '//call.chatra.io/chatra.js';
+          if (d.head) d.head.appendChild(s);
+      })(document, window, 'Chatra');
+  </script>
 </html>
