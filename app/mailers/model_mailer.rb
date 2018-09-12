@@ -5,7 +5,7 @@ class ModelMailer < ApplicationMailer
     @phone = phone
     @message = message
     # mail to: 'matchmike1313@gmail.com', subject: "New Message from #{@name}"
-    mail to: 'mary@cgs-llc.net', cc: 'monte@cgs-llc.net', subject: "New Message from #{@name}", bcc: 'matchmike1313@gmail.com'
+    mail to: 'monte@cgs-llc.net', subject: "New Message from #{@name}", bcc: 'matchmike1313@gmail.com'
   end
 
   def request_quote(customer_information)
@@ -22,6 +22,6 @@ class ModelMailer < ApplicationMailer
     @weight = customer_information[:weight]
     @description = customer_information[:description]
     # mail to: 'matchmike1313@gmail.com', subject: "Quote Request from #{@name}"
-    mail to: 'mary@cgs-llc.net', cc: 'monte@cgs-llc.net', subject: "Quote Request from #{@name}", bcc: 'matchmike1313@gmail.com'
+    mail to: 'monte@cgs-llc.net', subject: "Quote Request from #{@name}", bcc: 'matchmike1313@gmail.com'
   end
 end
