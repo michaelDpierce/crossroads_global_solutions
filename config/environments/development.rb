@@ -52,14 +52,12 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :authentication => :plain,
-    :address => "smtp.mailgun.org",
-    :port => 587,
-    :domain => "email.mg.cgs-llc.net",
-    :user_name => "postmaster@mg.cgs-llc.net",
-    :password => "71c7380aa2c9553f2e8603abab08d7dd",
-    enable_starttls_auto: true
+    :user_name => ENV['MAILTRAP_USERNAME'],
+    :password => ENV['MAILTRAP_PASSWORD'],
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
   }
 end

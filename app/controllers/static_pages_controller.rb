@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   skip_before_action :verify_authenticity_token
   require 'slack-notifier'
+
   CONTACT_WEBHOOK_URL = 'https://hooks.slack.com/services/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'
   REQUEST_QUOTE_WEBHOOK_URL = 'https://hooks.slack.com/services/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'
 
@@ -20,11 +21,11 @@ class StaticPagesController < ApplicationController
   end
 
   def send_message
-    # name = params['name']
-    # email = params['email']
-    # phone = params['phone']
-    # message = params['message']
-    # ModelMailer.contact(name, email, phone, message).deliver
+    name = params['name']
+    email = params['email']
+    phone = params['phone']
+    message = params['message']
+    ModelMailer.contact(name, email, phone, message).deliver
 
     notifier = Slack::Notifier.new CONTACT_WEBHOOK_URL, channel: '#messages',
                                                         username: 'contactbot'
@@ -61,7 +62,7 @@ class StaticPagesController < ApplicationController
       description: params['description']
     }
 
-    # ModelMailer.request_quote(customer_information).deliver
+    ModelMailer.request_quote(customer_information).deliver
 
     notifier = Slack::Notifier.new CONTACT_WEBHOOK_URL, channel: '#request_quote',
                                                         username: 'quotebot'

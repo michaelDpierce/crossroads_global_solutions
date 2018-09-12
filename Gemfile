@@ -22,6 +22,7 @@ gem 'slack-notifier'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'dotenv'
 end
 
 group :development do
